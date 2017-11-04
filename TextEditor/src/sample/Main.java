@@ -84,8 +84,10 @@ public class Main extends Application {
             @Override
             public void changed(final ObservableValue<? extends String> observable, final String oldValue, final String newValue) {
 
-                // creates a String array "parts" that gets characters/words(one or more).
-                //So whenever a new character is typed, it will be counted as a word until a " " occurs!
+                // creates a String array "parts" that gets words
+                //Everything that is not a part of a word, that is not present in the alphabet or a number, is not counted as a word
+                // example = " ", ",", "!", "!" these will not count as words if they stand alone but they are used to split!
+                //
                 String[] parts = textArea.getText().split("\\W+");
                 // this will run whenever text is changed
                 value = textArea.getText().replaceAll("\n", System.getProperty("line.separator"));
