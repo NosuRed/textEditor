@@ -138,7 +138,7 @@ public class Main extends Application {
                 // example = , Hello -> counts as 2 words.
                 // this issue only happens in this instance and after wards it works fine.
                 if (value.equals("")) {
-                    wordCounter = 0;
+                    wordCount.setText("Words " + 0);
 
                 } else {
                     wordCount.setText("Words: " + wordCounter);
